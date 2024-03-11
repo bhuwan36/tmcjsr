@@ -6,8 +6,6 @@ const database = require("./config/database");
 var cors = require("cors");
 
 
-dotenv.config();
-const PORT = 4000;
 
 app.use(
   cors({
@@ -30,6 +28,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`App is running at ${PORT}`);
+app.listen(8080, () => {
+  console.log(`App is running at ${8080}`);
 })
