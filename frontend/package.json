@@ -1,9 +1,7 @@
 {
-  "name": "health-plus",
+  "name": "tmc-jsr",
   "version": "0.1.0",
   "private": true,
-  "main": "index.js",
-  "homepage": "./",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
