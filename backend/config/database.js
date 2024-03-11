@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-require("dotenv").config();
+
 
 exports.connect = () => {
-    mongoose.connect(process.env.MONGODB_URL, {
+    mongoose.connect("mongodb+srv://bhuwanpradhan36:t0nbP20dg3AcJYRN@cluster0.13wz2ke.mongodb.net/tmcjsr", {
         useNewUrlParser: true,
         useUnifiedTopology:true,
     })
