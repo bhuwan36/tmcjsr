@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "backend": "cd backend && npm run dev",
-    "dev": "concurrently -n \"client,backend\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run backend\""
+    "dev": "concurrently -n \"client,./backend\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run backend\""
   },
   "eslintConfig": {
     "extends": [

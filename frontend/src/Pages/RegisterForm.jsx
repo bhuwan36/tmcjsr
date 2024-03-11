@@ -29,7 +29,7 @@ const RegisterForm = ({ onClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4000/api/auth/register', formData);
+            const response = await axios.post('https://tmcjsr.vercel.app/api/auth/register', formData);
             console.log(response.data);
             // Handle success
         } catch (error) {
