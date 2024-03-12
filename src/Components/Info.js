@@ -1,6 +1,6 @@
 import React from "react";
 import InformationCard from "./InformationCard";
-import { faHeartPulse, faTruckMedical, faTooth } from "@fortawesome/free-solid-svg-icons";
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Info.css";
 
 function Info() {
@@ -20,19 +20,19 @@ function Info() {
         <InformationCard
           title="Fundamentals of Talent Management"
           description="Acquiring skilled individuals through effective recruitment strategies and streamlining the onboarding process for smooth integration. Providing ongoing learning opportunities and implementing training programs to support professional growth. Facilitating career progression within the organization and encouraging employees to take on new challenges."
-          icon={faTruckMedical}
+          icon={faGraduationCap}
         />
 
         <InformationCard
           title="Key Components of Talent Management Strategy"
           description="Ensuring talent goals are closely tied to the overall business strategy and aligning employee development initiatives with organizational objectives. Utilizing data analytics to make informed decisions about talent management and leveraging metrics to assess the effectiveness of practices. Focusing on creating positive experiences for employees within the organization and promoting engagement through meaningful work and a supportive environment."
-          icon={faHeartPulse}
+          icon={faGraduationCap}
         />
 
         <InformationCard
           title="Strategic Implementation and Organizational Benefits"
           description="Quickly deploying talent as per organizational needs and reacting to market changes swiftly. Strategic HR Involvement: Engaging HR strategically and collaborating across departments. Competitive Advantage: Leveraging talent management for business performance and profitability."
-          icon={faTooth}
+          icon={faGraduationCap}
         />
       </div>
     </div>
