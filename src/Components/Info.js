@@ -11,41 +11,27 @@ function Info() {
           <span>What We Do</span>
         </h3>
         <p className="info-description">
-          We bring healthcare to your convenience, offering a comprehensive
-          range of on-demand medical services tailored to your needs. Our
-          platform allows you to connect with experienced online doctors who
-          provide expert medical advice, issue online prescriptions, and offer
-          quick refills whenever you require them.
+
+          Talent management drives business success by recruiting, developing, and retaining skilled employees. It aligns talent goals with business objectives, fosters a culture of empowerment, and utilizes data-driven decision-making. By prioritizing practices like rapid talent allocation and positive employee experiences, companies can outperform competitors and achieve higher success.
         </p>
       </div>
 
       <div className="info-cards-content">
         <InformationCard
-          title="Emergency Care"
-          description="Our Emergency Care service is designed to be your reliable support
-            in critical situations. Whether it's a sudden illness, injury, or
-            any medical concern that requires immediate attention, our team of
-            dedicated healthcare professionals is available 24/7 to provide
-            prompt and efficient care."
+          title="Fundamentals of Talent Management"
+          description="Acquiring skilled individuals through effective recruitment strategies and streamlining the onboarding process for smooth integration. Providing ongoing learning opportunities and implementing training programs to support professional growth. Facilitating career progression within the organization and encouraging employees to take on new challenges."
           icon={faTruckMedical}
         />
 
         <InformationCard
-          title="Heart Disease"
-          description="Our team of experienced cardiologists and medical experts use
-            state-of-the-art technology to assess your cardiovascular health and
-            design personalized treatment plans. From comprehensive screenings
-            to advanced interventions, we are committed to helping you maintain
-            a healthy heart and lead a fulfilling life."
+          title="Key Components of Talent Management Strategy"
+          description="Ensuring talent goals are closely tied to the overall business strategy and aligning employee development initiatives with organizational objectives. Utilizing data analytics to make informed decisions about talent management and leveraging metrics to assess the effectiveness of practices. Focusing on creating positive experiences for employees within the organization and promoting engagement through meaningful work and a supportive environment."
           icon={faHeartPulse}
         />
 
         <InformationCard
-          title="Dental Care"
-          description="Smile with confidence as our Dental Care services cater to all your
-            oral health needs. Our skilled dentists provide a wide range of
-            treatments, from routine check-ups and cleanings to cosmetic
-            procedures and restorative treatments."
+          title="Strategic Implementation and Organizational Benefits"
+          description="Quickly deploying talent as per organizational needs and reacting to market changes swiftly. Strategic HR Involvement: Engaging HR strategically and collaborating across departments. Competitive Advantage: Leveraging talent management for business performance and profitability."
           icon={faTooth}
         />
       </div>

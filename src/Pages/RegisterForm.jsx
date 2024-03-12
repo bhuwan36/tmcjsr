@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import '../css/RegisterForm.css';
 import axios from 'axios';
-
+import { toast } from "react-toastify";
 
 const RegisterForm = ({ onClose }) => {
     const [formData, setFormData] = useState({
@@ -21,6 +21,8 @@ const RegisterForm = ({ onClose }) => {
         pincode: '',
     });
 
+    const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -29,8 +31,16 @@ const RegisterForm = ({ onClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            if (!isButtonDisabled) {
+                toast.success("Registered Successfully.", {
+                    position: toast.POSITION.TOP_CENTER,
+                    onOpen: () => setIsButtonDisabled(true),
+                    onClose: () => setIsButtonDisabled(false),
+                });
+            }
             const response = await axios.post('https://tmcjsr-backend.vercel.app/api/auth/register', formData);
             console.log(response.data);
+
             // Handle success
         } catch (error) {
             console.error('Error:', error.response.data);
@@ -66,7 +76,7 @@ const RegisterForm = ({ onClose }) => {
                     <input type="text" name="district" placeholder="District" value={formData.district} onChange={handleChange} />
                     <input type="text" name="state" placeholder="State" value={formData.state} onChange={handleChange} />
                     <input type="text" name="pincode" placeholder="Pincode" value={formData.pincode} onChange={handleChange} />
-                    <button type="submit">Submit</button>
+                    <button type="submit" disabled={isButtonDisabled} >Submit</button>
                 </form>
             </div>
         </div>

@@ -1,5 +1,5 @@
 .ba-section {
-    padding: 32px;
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +41,7 @@
 }
 .ba-description {
     margin: 32px 0;
+    padding: 0;
     color: #4d4b4b;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
@@ -50,6 +51,7 @@
 /* Checks */
 .ba-checks {
     margin: 28px 0;
+    padding: 0;
     font-family: 'Rubik', sans-serif;
     font-size: 22px;
     font-weight: bold;
@@ -57,9 +59,11 @@
 }
 .ba-check-first {
     margin-top: 40px;
+    padding: 0;
 }
 .ba-check-last {
     margin-bottom: 40px;
+    padding: 0;
 }
 /* Book Appointment Button */
 .ba-appointment-btn {

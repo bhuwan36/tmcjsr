@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from "react";
-import Doctor from "../Assets/doctor-picture.png";
+import Modal from "react-modal";
+import RegisterForm from "../Pages/RegisterForm";
+import Doctor from "../Assets/ranjan.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate  } from "react-router-dom";
 import "../Styles/Hero.css";
 
 function Hero() {
-  const navigate = useNavigate();
+
   const [goUp, setGoUp] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleBookAppointmentClick = () => {
-    navigate("/appointment");
-  };
+
 
   useEffect(() => {
     const onPageScroll = () => {
@@ -32,46 +31,62 @@ function Hero() {
     };
   }, []);
 
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
+
+  const openRegisterModal = () => {
+    setShowRegisterModal(true);
+  };
+
+  const closeRegisterModal = () => {
+    setShowRegisterModal(false);
+  };
   return (
     <div className="section-container">
+      <Modal
+        isOpen={showRegisterModal}
+        onRequestClose={closeRegisterModal}
+        contentLabel="Register Form"
+        className="register-modal"
+        overlayClassName="register-overlay"
+      >
+        <RegisterForm onClose={closeRegisterModal} />
+      </Modal>
       <div className="hero-section">
         <div className="text-section">
-          <p className="text-headline">❤️ Health comes first</p>
+          <p className="text-headline">🎓 Talent Management Center</p>
           <h2 className="text-title">
-            Find your Doctor and make an Appointments
+            Join, Learn, and Hired
           </h2>
           <p className="text-descritpion">
-            Talk to online doctors and get medical advice, online prescriptions,
-            refills and medical notes within minutes. On-demand healthcare
-            services at your fingertips.
+            We build your talent for jobs. To give opportunity at big Multi National Companies. Here, we connect students to employers by scheduling interviews, matching students with their relevant fields, providing Internships and connecting them to companies.
           </p>
           <button
             className="text-appointment-btn"
             type="button"
-            onClick={handleBookAppointmentClick}
+            onClick={openRegisterModal}
           >
-            <FontAwesomeIcon icon={faCalendarCheck} /> Book Appointment
+            <FontAwesomeIcon icon={faCalendarCheck} /> Register Now
           </button>
           <div className="text-stats">
             <div className="text-stats-container">
-              <p>145k+</p>
-              <p>Receive Patients</p>
+              <p>500+</p>
+              <p>Students Got Job</p>
             </div>
 
             <div className="text-stats-container">
-              <p>50+</p>
-              <p>Expert Doctors</p>
+              <p>20+</p>
+              <p>Expert Teachers</p>
             </div>
 
             <div className="text-stats-container">
-              <p>10+</p>
+              <p>5+</p>
               <p>Years of Experience</p>
             </div>
           </div>
         </div>
 
         <div className="hero-image-section">
-          <img className="hero-image1" src={Doctor} alt="Doctor" />
+          <img className="hero-image1" style={{ borderRadius: "20px" }} src={Doctor} alt="Doctor" />
         </div>
       </div>
 

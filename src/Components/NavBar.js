@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import Modal from "react-modal";
+import RegisterForm from "../Pages/RegisterForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Logo from "../Assets/logo.png";
 import {
   faCommentDots,
   faBars,
@@ -7,31 +10,41 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
+
 
 function Navbar() {
   const [nav, setNav] = useState(false);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
 
   const openNav = () => {
     setNav(!nav);
   };
 
-  const handleChatBtnClick = () => {
-    if (!isButtonDisabled) {
-      toast.info("Experiencing high traffic, Please wait a moment.", {
-        position: toast.POSITION.TOP_CENTER,
-        onOpen: () => setIsButtonDisabled(true),
-        onClose: () => setIsButtonDisabled(false),
-      });
-    }
+
+
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
+
+  const openRegisterModal = () => {
+    setShowRegisterModal(true);
   };
 
+  const closeRegisterModal = () => {
+    setShowRegisterModal(false);
+  };
   return (
     <div className="navbar-section">
+      <Modal
+        isOpen={showRegisterModal}
+        onRequestClose={closeRegisterModal}
+        contentLabel="Register Form"
+        className="register-modal"
+        overlayClassName="register-overlay"
+      >
+        <RegisterForm onClose={closeRegisterModal} />
+      </Modal>
       <h1 className="navbar-title">
         <Link to="/">
-          Health <span className="navbar-sign">+</span>
+          <img style={{ width: "300px", marginTop: "5px" }} src={Logo} alt="Logo" />
         </Link>
       </h1>
 
@@ -58,8 +71,8 @@ function Navbar() {
           </a>
         </li>
         <li>
-          <a href="#doctors" className="navbar-links">
-            Doctors
+          <a href="#team" className="navbar-links">
+            Team
           </a>
         </li>
       </ul>
@@ -67,10 +80,9 @@ function Navbar() {
       <button
         className="navbar-btn"
         type="button"
-        disabled={isButtonDisabled}
-        onClick={handleChatBtnClick}
+        onClick={openRegisterModal}
       >
-        <FontAwesomeIcon icon={faCommentDots} /> Live Chat
+        <FontAwesomeIcon icon={faCommentDots} /> Register Now
       </button>
 
       {/* Mobile */}
@@ -101,8 +113,8 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a onClick={openNav} href="#doctors">
-              Doctors
+            <a onClick={openNav} href="#team">
+              Team
             </a>
           </li>
           <li>

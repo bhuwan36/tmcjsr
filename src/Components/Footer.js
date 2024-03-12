@@ -10,12 +10,10 @@ function Footer() {
         <div className="ft-info">
           <div className="ft-info-p1">
             <p className="ft-title">
-              Health <span className="ft-sign">+</span>
+              TMC <span className="ft-sign">🎓</span>
             </p>
             <p className="ft-description">
-              Talk to online doctors and get medical advice, online
-              prescriptions, refills and medical notes within minutes. On-demand
-              healthcare services at your fingertips.
+              Our Talent Management Team specializes in recruiting, developing, and retaining skilled individuals to drive business performance and competitiveness through strategic alignment with organizational objectives, fostering a culture of empowerment and innovation.
             </p>
           </div>
 
@@ -26,19 +24,19 @@ function Footer() {
           <p className="ft-list-title">Services</p>
           <ul className="ft-list-items">
             <li>
-              <a href="#services">Emergency Care</a>
+              <a href="#services">Fundamentals of TMC</a>
             </li>
             <li>
-              <a href="#services">Heart Disease</a>
+              <a href="#services">Key Components</a>
             </li>
             <li>
-              <a href="#services">Dental Care</a>
+              <a href="#services">Strategic Benefits</a>
             </li>
             <li>
-              <a href="#services">Prescription</a>
+              <a href="#services">Consultations</a>
             </li>
             <li>
-              <a href="#services">Insights for doctors</a>
+              <a href="#services">Insights for Organization</a>
             </li>
           </ul>
         </div>
@@ -68,30 +66,25 @@ function Footer() {
           <p className="ft-list-title">Talk To Us</p>
           <ul className="ft-list-items">
             <li>
-              <a href="mailto:support@healthplus.com">support@healthplus.com</a>
+              <a href="mailto:talentmanagementcenterjsr@gmail.com">talentmanagementcenterjsr@gmail.com</a>
             </li>
             <li>
-              <a href="mailto:appointment@healthplus.com">
-                appointment@healthplus.com
-              </a>
+              <a href="tel:+916279442740">+91 6279442740</a>
             </li>
             <li>
-              <a href="tel:+022 5454 5252">+022 5454 5252</a>
-            </li>
-            <li>
-              <a href="tel:+022 2326 6232">+022 2326 6232</a>
+              <a href="tel:+916206510351">+91 6206510351</a>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="ft-copyright">
-        <p>© 2013-2023 Health+. All rights reserved.</p>
+        <p>© 2021-2024 Talent Management Center. All rights reserved.</p>
 
         <ul className="ft-social-links">
           <li>
             <a
-              href="https://linkedin.com/in/Alkaison/"
+              href="https://linkedin.com/in/"
               title="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
@@ -125,7 +118,7 @@ function Footer() {
 
           <li>
             <a
-              href="https://x.com/Alkaison/"
+              href="https://x.com/"
               title="Twitter"
               target="_blank"
               rel="noopener noreferrer"

@@ -1,5 +1,5 @@
 import React from "react";
-import Doctor from "../Assets/doctor-group.png";
+import Doctor from "../Assets/image2.png";
 import SolutionStep from "./SolutionStep";
 import "../Styles/About.css";
 
@@ -15,27 +15,25 @@ function About() {
           <span>About Us</span>
         </h3>
         <p className="about-description">
-          Welcome to Health Plus, your trusted partner for accessible and
-          personalized healthcare. Our expert doctors offer online consultations
-          and specialized services, prioritizing your well-being. Join us on
-          this journey towards a healthier you.
+
+          Welcome to the world of talent management! Here, we believe in the power of recruiting, developing, and retaining a productive workforce to drive business success and maintain a competitive edge. Our focus is on investing in our employees through skilled recruitment, continuous learning opportunities, and internal growth pathways.
         </p>
 
         <h4 className="about-text-title">Your Solutions</h4>
 
         <SolutionStep
-          title="Choose a Specialist"
-          description="Find your perfect specialist and book with ease at Health Plus. Expert doctors prioritize your health, offering tailored care."
+          title="Key components"
+          description="Key components of our talent management approach include aligning talent goals with business objectives, fulfilling employee expectations, and utilizing data-driven decision-making. We prioritize workforce planning, recruitment, onboarding, training, performance management, compensation, benefits, and succession planning to ensure a thriving organizational culture.."
         />
 
         <SolutionStep
-          title="Make a Schedule"
-          description="Choose the date and time that suits you best, and let our dedicated team of medical professionals ensure your well-being with personalized care."
+          title="Our goal"
+          description="Our goal is to cultivate an environment that empowers employees to excel, fostering innovation and profitability within our organization. By implementing experience-driven development at our core, we provide intentional learning experiences that align with our business strategies and nurture leadership growth."
         />
 
         <SolutionStep
-          title="Get Your Solutions"
-          description="Our experienced doctors and specialists are here to provide expert advice and personalized treatment plans, helping you achieve your best possible health."
+          title="focus on practices"
+          description="With a focus on practices like rapid talent allocation, creating positive employee experiences, and involving HR strategically, we aim to outperform competitors and achieve higher levels of success. Welcome to a journey of growth, development, and excellence in talent management."
         />
       </div>
     </div>
