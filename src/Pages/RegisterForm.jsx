@@ -58,14 +58,14 @@ const RegisterForm = ({ onClose }) => {
                     <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} />
                     <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
                     <input type="text" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} />
-                    <input type="date" name="dob" value={formData.dob} onChange={handleChange} />
+                    <input type="date" name="dob" value={formData.dob} placeholder="Date of Birth" onChange={handleChange} />
                     <select name="hq" value={formData.hq} onChange={handleChange}>
                         <option value="">Select Highest Qualification</option>
-                        <option value="hq1">Matriculation</option>
-                        <option value="hq2">Intermediate</option>
-                        <option value="hq2">Graduation</option>
-                        <option value="hq2">Post Graduation</option>
-                        <option value="hq2">Diploma</option>
+                        <option value="Matriculation">Matriculation</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Graduation">Graduation</option>
+                        <option value="Post Graduation">Post Graduation</option>
+                        <option value="Diploma">Diploma</option>
                         {/* Add more options as needed */}
                     </select>
                     <select name="gender" value={formData.gender} onChange={handleChange}>
