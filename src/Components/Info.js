@@ -11,8 +11,7 @@ function Info() {
           <span>What We Do</span>
         </h3>
         <p className="info-description">
-
-          Talent management drives business success by recruiting, developing, and retaining skilled employees. It aligns talent goals with business objectives, fosters a culture of empowerment, and utilizes data-driven decision-making. By prioritizing practices like rapid talent allocation and positive employee experiences, companies can outperform competitors and achieve higher success.
+The Talent Management Centre offers a range of services including soft skills training, professional development classes, and English communication skill enhancement. Additionally, they provide placement assistance to help students prepare for job opportunities. Various job openings related to talent management are available at institutions like PSG Talent Management Centre in Coimbatore, India. Furthermore, there are numerous job listings for Talent Management Institute positions in India on platforms like LinkedIn. Organizations like SCM Consultancy Services emphasize the importance of the placement process in talent management for positive publicity. For individuals seeking talent management roles, platforms like Naukri.com offer a wide array of job opportunities in this field.
         </p>
       </div>
 
