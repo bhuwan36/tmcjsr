@@ -1,0 +1,52 @@
+/* Gallery.css */
+
+.carousel-image {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 20px 5px;
+    padding: 10px;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    height: 30px;
+    line-height: 1;
+    text-align: center;
+    width: 30px;
+}
+
+.carousel-btn:hover {
+    background: gray;
+}
+
+.forward-btn {
+    right: -15px;
+}
+
+.backward-btn {
+    left: -15px;
+}
+
+@media (min-width: 576px) {
+    .carousel-image {
+        width: auto;
+        height: 50vh;
+    }
+}

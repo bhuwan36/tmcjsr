@@ -1,7 +1,7 @@
 import React from "react";
 import TeamCard from "./TeamCard";
-import profile1 from "../Assets/ranjan.png";
-import profile2 from "../Assets/ts.jpeg";
+import profile1 from "../Assets/ranjan.jpg";
+import profile2 from "../Assets/ts.jpg";
 import "../Styles/Team.css";
 
 function Team() {

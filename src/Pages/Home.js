@@ -7,6 +7,7 @@ import BookAppointment from "../Components/BookAppointment";
 import Carousel from "../Components/Carousel";
 import Team from "../Components/Team";
 import Footer from "../Components/Footer";
+import Gallery from "../Components/Gallery";
 
 function Home() {
 
@@ -18,6 +19,7 @@ function Home() {
       <About />
       <BookAppointment />
       <Carousel />
+      <Gallery />
       <Team />
       <Footer />
     </div>
