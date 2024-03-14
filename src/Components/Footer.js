@@ -69,7 +69,7 @@ function Footer() {
               <a href="mailto:talentmanagementcenterjsr@gmail.com">talentmanagementcenterjsr@gmail.com</a>
             </li>
             <li>
-              <a href="tel:+916279442740">+91 6279442740</a>
+              <a href="tel:+917091560655">+91 7091560655</a>
             </li>
             <li>
               <a href="tel:+916206510351">+91 6206510351</a>
@@ -101,7 +101,7 @@ function Footer() {
 
           <li>
             <a
-              href="https://facebook.com/"
+              href="https://www.facebook.com/profile.php?id=100004964346975&mibextid=opq0tG"
               title="FaceBook"
               target="_blank"
               rel="noopener noreferrer"
