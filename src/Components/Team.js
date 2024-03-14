@@ -2,6 +2,7 @@ import React from "react";
 import TeamCard from "./TeamCard";
 import profile1 from "../Assets/ranjan.jpg";
 import profile2 from "../Assets/ts.jpg";
+import profile3 from "../Assets/bb.jpg";
 import "../Styles/Team.css";
 
 function Team() {
@@ -29,6 +30,13 @@ function Team() {
           img={profile2}
           name="Tanya Sharma"
           title="Human resources (HR)"
+          stars=""
+          reviews=""
+        />
+        <TeamCard
+          img={profile3}
+          name="Biotima Bose"
+          title="Office Executive"
           stars=""
           reviews=""
         />
