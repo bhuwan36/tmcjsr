@@ -56,6 +56,11 @@ const userSchema = new mongoose.Schema(
         pincode: {
             type: Number,
             required: true,
+        },
+        utr: {
+            type: String,
+            required: true,
+            trim: true,
         }
 
 

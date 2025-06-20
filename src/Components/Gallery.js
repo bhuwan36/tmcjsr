@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import ReactSimplyCarousel from 'react-simply-carousel';
+
+import { useState, useEffect, useRef } from 'react';
 import '../Styles/Gallery.css';
 import Image0 from '../Assets/gallery/image0.jpg';
 import Image0_1 from '../Assets/gallery/image0.1.jpg';
@@ -18,77 +18,71 @@ import Image12 from '../Assets/gallery/image12.jpg';
 import Image13 from '../Assets/gallery/image13.jpg';
 
 function Gallery() {
+    // All gallery images
+    const images = [
+        Image0, Image0_1, Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image10, Image11, Image12, Image13
+    ];
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+    const intervalRef = useRef();
+    const [isPaused, setIsPaused] = useState(false);
+    const [hoveredIdx, setHoveredIdx] = useState(null);
+
+    // Show 4 images at once
+    const imagesToShow = 4;
+
+    // Auto-scroll effect (faster: 1s)
+    useEffect(() => {
+        if (!isPaused) {
+            intervalRef.current = setInterval(() => {
+                setActiveSlideIndex((prev) => (prev + 1) % images.length);
+            }, 1000);
+        }
+        return () => clearInterval(intervalRef.current);
+    }, [images.length, isPaused]);
+
+    // Get visible images for the row
+    const getVisibleImages = () => {
+        let visible = [];
+        for (let i = 0; i < imagesToShow; i++) {
+            visible.push((activeSlideIndex + i) % images.length);
+        }
+        return visible;
+    };
+
+    const visible = getVisibleImages();
+
     return (
         <div className="carousel-container">
             <center> <h3 className="dt-title" style={{ margin: '20px' }}>
                 <span>Gallery</span>
             </h3></center>
-            <ReactSimplyCarousel
-                activeSlideIndex={activeSlideIndex}
-                onRequestChange={setActiveSlideIndex}
-                itemsToShow={1}
-                itemsToScroll={1}
-                forwardBtnProps={{
-                    style: {
-                        alignSelf: 'center',
-                        background: 'black',
-                        border: 'none',
-                        borderRadius: '50%',
-                        color: 'white',
-                        cursor: 'pointer',
-                        fontSize: '20px',
-                        height: 30,
-                        lineHeight: 1,
-                        textAlign: 'center',
-                        width: 30,
-                    },
-                    children: <span>{`>`}</span>,
-                }}
-                backwardBtnProps={{
-                    style: {
-                        alignSelf: 'center',
-                        background: 'black',
-                        border: 'none',
-                        borderRadius: '50%',
-                        color: 'white',
-                        cursor: 'pointer',
-                        fontSize: '20px',
-                        height: 30,
-                        lineHeight: 1,
-                        textAlign: 'center',
-                        width: 30,
-                    },
-                    children: <span>{`<`}</span>,
-                }}
-                responsiveProps={[
-                    {
-                        itemsToShow: 4,
-                        itemsToScroll: 1,
-                        minWidth: 768,
-                    },
-                ]}
-                speed={400}
-                easing="linear"
+            <div
+                className="gallery-row"
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => { setIsPaused(false); setHoveredIdx(null); }}
             >
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image0} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image0_1} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image1} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image2} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image3} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image4} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image5} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image6} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image7} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image8} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image9} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image10} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image11} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image12} />
-                <img style={{ border: '2px solid black', borderRadius: '10px', width: '18rem', height: '50vh', objectFit: 'contain', marginTop: '20px', marginLeft: '5px', }} src={Image13} />
-
-
-            </ReactSimplyCarousel>
+                {visible.map((imgIdx) => (
+                    <img
+                        key={imgIdx}
+                        src={images[imgIdx]}
+                        className={`carousel-image gallery-img${hoveredIdx === imgIdx ? ' hovered' : ''}`}
+                        alt={`gallery${imgIdx}`}
+                        onMouseEnter={() => setHoveredIdx(imgIdx)}
+                        onMouseLeave={() => setHoveredIdx(null)}
+                    />
+                ))}
+                {hoveredIdx !== null && (
+                    <>
+                        <div className="gallery-overlay"></div>
+                        <img
+                            src={images[hoveredIdx]}
+                            className="carousel-image gallery-img hovered"
+                            alt={`gallery${hoveredIdx}`}
+                            style={{ pointerEvents: 'auto' }}
+                        />
+                    </>
+                )}
+            </div>
         </div>
     );
 }

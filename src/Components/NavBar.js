@@ -9,12 +9,12 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function Navbar() {
   const [nav, setNav] = useState(false);
-
+  const navigate = useNavigate();
 
   const openNav = () => {
     setNav(!nav);
@@ -31,6 +31,12 @@ function Navbar() {
   const closeRegisterModal = () => {
     setShowRegisterModal(false);
   };
+
+  // Admin button logic
+  const handleAdminClick = () => {
+    navigate("/admin/login");
+  };
+
   return (
     <div className="navbar-section">
       <Modal
@@ -83,6 +89,14 @@ function Navbar() {
         onClick={openRegisterModal}
       >
         <FontAwesomeIcon icon={faCommentDots} /> Register Now
+      </button>
+      <button
+        className="navbar-btn admin-btn"
+        type="button"
+        style={{ marginLeft: 12 }}
+        onClick={handleAdminClick}
+      >
+        Admin
       </button>
 
       {/* Mobile */}

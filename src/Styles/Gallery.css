@@ -1,52 +1,205 @@
+@media (max-width: 700px) {
+  .gallery-row {
+    gap: 1rem;
+    min-height: 30vh;
+    padding: 1rem 0;
+  }
+  .gallery-img {
+    width: 38vw;
+    max-width: 160px;
+    height: 16vh;
+    min-width: 80px;
+    border-radius: 10px;
+  }
+  .gallery-img.hovered {
+    width: 90vw !important;
+    max-width: 98vw !important;
+    height: 40vh !important;
+    min-width: 120px !important;
+    border-radius: 12px !important;
+  }
+}
+.gallery-row {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem 0;
+    /* position: relative; removed to allow fixed hover image to center */
+}
+
+.gallery-img {
+    width: 22vw;
+    max-width: 400px;
+    height: 28vh;
+    min-width: 220px;
+    object-fit: contain;
+    margin: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: opacity 0.5s, transform 0.5s, box-shadow 0.4s, z-index 0s;
+    z-index: 1;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(26, 142, 253, 0.10);
+    cursor: pointer;
+    background: #fff;
+}
+
+.gallery-img:hover {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1.1) !important;
+    width: 80vw !important;
+    max-width: 900px !important;
+    height: 80vh !important;
+    min-width: 320px !important;
+    object-fit: contain !important;
+    z-index: 2001 !important;
+    box-shadow: 0 12px 48px rgba(26, 142, 253, 0.25) !important;
+    background: #fff !important;
+    transition: transform 0.5s cubic-bezier(0.77,0,0.175,1), box-shadow 0.4s, z-index 0s !important;
+    animation: popIn 0.5s !important;
+    border-radius: 18px !important;
+}
+
+
+/* Overlay for dark blur effect on hover */
+.gallery-overlay {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 18, 32, 0.65);
+    backdrop-filter: blur(6px);
+    z-index: 2000;
+    pointer-events: auto;
+    transition: opacity 0.3s;
+}
+
+body::after {
+    content: '';
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0.7; }
+    to { transform: scale(1.12); opacity: 1; }
+}
+
+.fade-in {
+    opacity: 1;
+    transform: scale(1.04);
+    z-index: 3;
+    animation: fadeInGallery 1s;
+}
+
+.fade-mid {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+    animation: fadeInGallery 1s;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: scale(0.92);
+    z-index: 1;
+    animation: fadeOutGallery 1.2s;
+}
+
+.fade-hidden {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes fadeInGallery {
+    from { opacity: 0; transform: scale(0.92); }
+    to { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes fadeOutGallery {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.92); }
+}
 /* Gallery.css */
 
 .carousel-image {
-    border: 2px solid black;
-    border-radius: 10px;
+    border: none;
+    border-radius: 18px;
     width: 100%;
     height: auto;
     object-fit: cover;
-    margin: 20px 5px;
-    padding: 10px;
+    margin: 16px 8px;
+    padding: 0;
+    box-shadow: 0 4px 24px rgba(26, 142, 253, 0.10);
+    transition: transform 0.25s cubic-bezier(0.77,0,0.175,1), box-shadow 0.25s;
+}
+
+.carousel-image:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 8px 32px rgba(26, 142, 253, 0.18);
 }
 
 .carousel-container {
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     overflow: hidden;
+    padding: 32px 16px;
+    border-radius: 18px;
+    background: #f8fafc;
+    box-shadow: 0 2px 8px rgba(26, 142, 253, 0.06);
 }
 
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: black;
+    background: #1A8EFD;
     border: none;
     border-radius: 50%;
     color: white;
     cursor: pointer;
-    font-size: 20px;
-    height: 30px;
-    line-height: 1;
-    text-align: center;
-    width: 30px;
+    font-size: 22px;
+    height: 40px;
+    width: 40px;
+    box-shadow: 0 2px 8px rgba(26, 142, 253, 0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
 }
 
 .carousel-btn:hover {
-    background: gray;
+    background: #176fd6;
+    box-shadow: 0 4px 16px rgba(26, 142, 253, 0.18);
 }
 
 .forward-btn {
-    right: -15px;
+    right: 8px;
 }
 
 .backward-btn {
-    left: -15px;
+    left: 8px;
 }
 
 @media (min-width: 576px) {
     .carousel-image {
         width: auto;
-        height: 50vh;
+        height: 48vh;
     }
 }

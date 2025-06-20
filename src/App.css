@@ -25,3 +25,33 @@ html {
     background-color: #1A8EFD;
     border-radius: 4rem;
 }
+
+body {
+    background: #f8fafc;
+    animation: fadeIn 1.2s ease-in;
+    font-family: 'Poppins', 'Rubik', sans-serif;
+    color: #222;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+button {
+    background: #1A8EFD;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: box-shadow 0.2s, background 0.3s;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(26, 142, 253, 0.08);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+button:hover {
+    background: #176fd6;
+    box-shadow: 0 4px 16px rgba(26, 142, 253, 0.12);
+}

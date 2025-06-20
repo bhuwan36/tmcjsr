@@ -1,14 +1,23 @@
 .footer-section {
     background-color: #1B2433;
+    animation: footerFadeIn 1.2s ease;
+    padding: 40px 0 0 0;
+    margin-top: 40px;
+    border-radius: 18px 18px 0 0;
+}
+
+@keyframes footerFadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .footer-container {
-    padding: 38px;
+    padding: 38px 32px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 12px;
+    gap: 24px;
     color: white;
     border-bottom: 2px solid #293241;
     border-radius: 2px;
@@ -82,8 +91,9 @@
 
 .ft-btn:hover {
     color: #1A8EFD;
-    background-color: white;
+    background-color: #eaf6ff;
     border: 2px solid #1A8EFD;
+    box-shadow: 0 4px 16px rgba(26, 142, 253, 0.10);
 }
 
 /* Lists */
@@ -168,6 +178,8 @@
 .ft-social-links li a:hover svg path {
     fill: #1A8EFD;
     border: 2px solid #1A8EFD;
+    background: #eaf6ff;
+    transition: background 0.2s, border 0.2s, fill 0.2s;
 }
 
 /* Responsive */

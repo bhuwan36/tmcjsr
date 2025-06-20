@@ -2,10 +2,17 @@
 
 .Reviews {
     text-align: center;
-    margin: 0 auto;
-    padding: 0;
+    margin: 32px 0;
+    padding: 48px 24px;
     font-family: "Poppins", "sans-serif";
-    background-color: #DDE5F8;
+    background-color: #f8fafc;
+    animation: carouselFadeIn 1.1s ease;
+    border-radius: 18px;
+}
+
+@keyframes carouselFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @media screen and (max-width: 700px) {
@@ -44,15 +51,21 @@
 }
 
 .card {
-    margin: 5em 2em 0em;
-    background-color: ivory;
-    padding: 2em;
+    margin: 3em 2em 0em;
+    background-color: #fff;
+    padding: 2.5em 2em;
     width: 35%;
     height: 200px;
     flex: 1;
     /* each card is of equal size */
-    box-shadow: 6px 6px 17px 1px rgba(0, 0, 0, 0.36);
-    -webkit-box-shadow: 6px 6px 17px 1px rgba(0, 0, 0, 0.36);
+    box-shadow: 0 4px 24px rgba(26, 142, 253, 0.07);
+    border-radius: 16px;
+    transition: transform 0.25s cubic-bezier(0.77,0,0.175,1), box-shadow 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(26, 142, 253, 0.13);
 }
 
 .leftCard {
