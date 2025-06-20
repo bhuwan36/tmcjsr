@@ -79,7 +79,7 @@ function Footer() {
       </div>
 
       <div className="ft-copyright">
-        <p>© 2021-2024 Talent Management Center. All rights reserved.</p>
+        <p>© 2021-2025 Talent Management Center. All rights reserved.</p>
 
         <ul className="ft-social-links">
           <li>

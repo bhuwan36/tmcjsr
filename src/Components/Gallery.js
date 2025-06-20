@@ -16,11 +16,23 @@ import Image10 from '../Assets/gallery/image10.jpg';
 import Image11 from '../Assets/gallery/image11.jpg';
 import Image12 from '../Assets/gallery/image12.jpg';
 import Image13 from '../Assets/gallery/image13.jpg';
+import Image14 from '../Assets/gallery/image14.jpg';
+import Image15 from '../Assets/gallery/image15.jpg';
+import Image16 from '../Assets/gallery/image16.jpg';
+import Image17 from '../Assets/gallery/image17.jpg';
+import Image18 from '../Assets/gallery/image18.jpg';
+import Image19 from '../Assets/gallery/image19.jpg';
+import Image20 from '../Assets/gallery/image20.jpg';
+import Image21 from '../Assets/gallery/image21.jpg';
+import Image22 from '../Assets/gallery/image22.jpg';
+import Image23 from '../Assets/gallery/image23.jpg';
+import Image24 from '../Assets/gallery/image24.jpg';
+
 
 function Gallery() {
     // All gallery images
     const images = [
-        Image0, Image0_1, Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image10, Image11, Image12, Image13
+        Image0, Image0_1, Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image10, Image11, Image12, Image13, Image14, Image15, Image16,Image17, Image18, Image19, Image20, Image21, Image22, Image23,Image24
     ];
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const intervalRef = useRef();

@@ -20,16 +20,16 @@ const AdminDashboard = () => {
   }, []);
 
   return (
-    <div style={{ width: '100vw', minHeight: '100vh', background: '#fafdff', padding: '32px 0' }}>
-      <div style={{ width: '100vw', overflowX: 'auto', margin: '0 auto' }}>
-        <div className="register-modal" style={{ margin: '0 auto', width: '100vw', minWidth: 1400, background: '#fff', boxShadow: '0 8px 32px rgba(26,142,253,0.13)', borderRadius: 14 }}>
-          <h2 style={{ textAlign: 'center', margin: '24px 0 16px 0' }}>All Registered Users</h2>
+    <div style={{ width: '100%', minHeight: '100vh', background: '#fafdff', padding: '32px 0' }}>
+      <div style={{ width: '100%', margin: '0 auto' }}>
+        <div className="register" style={{ margin: '0 auto', width: '100%', minWidth: 1400, background: '#fff', boxShadow: '0 8px 32px rgba(26,142,253,0.13)', borderRadius: 14 }}>
+          <h2 style={{ textAlign: 'center', margin: '20px 0 16px 0' }}>All Registered Users</h2>
           {loading ? (
             <div>Loading...</div>
           ) : users.length === 0 ? (
             <div>No users found.</div>
           ) : (
-            <table style={{ width: '100vw', borderCollapse: 'collapse', fontSize: '0.98rem', minWidth: 1400 }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.98rem', minWidth: 1400 }}>
               <thead style={{ background: '#eaf6ff' }}>
                 <tr>
                   <th style={{ border: '1px solid #eee', padding: 8 }}>Name</th>

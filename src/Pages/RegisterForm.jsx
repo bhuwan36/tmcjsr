@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import '../css/RegisterForm.css';
 import axios from 'axios';
 import { toast } from "react-toastify";
+import qr from '../Assets/qr.jpg';
 
 const RegisterForm = ({ onClose }) => {
     const [formData, setFormData] = useState({
@@ -141,7 +142,7 @@ const RegisterForm = ({ onClose }) => {
                     {showQR && (
                         <form onSubmit={handleFinalSubmit} style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                             <div style={{margin: '16px 0'}}>
-                                <img src="/logo512.png" alt="QR Code" style={{width: 180, height: 180, border: '1px solid #eee', borderRadius: 8}} />
+                                <img src={qr} alt="QR Code" style={{width: 180, height: 180, border: '1px solid #eee', borderRadius: 8}} />
                             </div>
                             <input
                                 type="text"
